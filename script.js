@@ -1,5 +1,6 @@
 ﻿const API_URL = "https://api.groq.com/openai/v1/chat/completions";
-const API_KEY = "COLE_SUA_CHAVE_AQUI";
+const API_KEY = localStorage.getItem("groq_key") || prompt("Cole sua chave da Groq:");
+localStorage.setItem("groq_key", $API_KEY);
 const MODEL = "openai/gpt-oss-20b";
 
 const areaMensagens = document.getElementById("mensagens");
