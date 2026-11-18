@@ -3,92 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Display GRID</title>
+    <title>Chat com IA</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="logo-container">
-        <img
-          src="6e123441-f22a-4bed-9a74-3ee9f6ca38ba.jpg"
-          alt="Logo do Site"
-          class="site-logo"
-        />
-        <h1>Filipe Rubson</h1>
-      </div>
-      <div class="barraPesquisa">
-        <input type="text" placeholder="Pesquisar..." />
-      </div>
-      <div class="disponibilidade">
-        <span>Status: Disponível</span>
-      </div>
-    </header>
-    <nav>
-      <div class="Itens">
-        <ul>
-          <li>
-            <a href="https://www.instagram.com/filiperubson" target="_blank">
-              <img src="instagram.png" alt="instagramLogo" />Instagram
-            </a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com" target="_blank">
-              <img src="facebook-removebg-preview.png" alt="Facebook" />Facebook
-            </a>
-          </li>
-          <li>
-            <a href="https://youtube.com" target="_blank">
-              <img src="youtube-removebg-preview.png" alt="YouTube" />YouTube
-            </a>
-          </li>
-          <li>
-            <a href="https://minecraft.net" target="_blank">
-              <img src="whatsapp-removebg-preview.png" alt="WhatsApp" />WhatsApp
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <aside>
-      <div class="lateral">
-        <h3>Categorias</h3>
-        <ul>
-          <li><a href="#">Desenvolvimento Web</a></li>
-          <li><a href="#">Design UI</a></li>
-          <li><a href="#">Tecnologias</a></li>
-        </ul>
-      </div>
-    </aside>
-    <main>
-      <div class="sobreMim">
-        <section>
-          <h2>Sobre mim:</h2>
-          <p>
-            Olá! Sou Filipe Rubson, atualmente cursando Sistemas de Informação e
-            este é o meu primeiro site.
+    <div class="layout">
+      <aside id="lateral" class="lateral" aria-label="Conversas anteriores">
+        <button id="btn-nova" type="button" class="nova">
+          + Nova conversa
+        </button>
+        <ul id="lista" class="lista"></ul>
+        <p id="lista-vazia" class="lista-vazia">
+          Nenhuma conversa salva ainda.
+        </p>
+      </aside>
+
+      <div id="fundo" class="fundo"></div>
+
+      <div class="app">
+        <header class="topo">
+          <button
+            id="btn-menu"
+            type="button"
+            class="menu"
+            aria-label="Abrir conversas"
+          >
+            ☰
+          </button>
+          <h1>Chat com IA</h1>
+        </header>
+
+        <main id="mensagens" class="mensagens" aria-live="polite">
+          <p id="vazio" class="vazio">
+            Escreva uma pergunta abaixo para começar a conversa.
           </p>
-        </section>
-        <hr>
-        <section>
-          <h2>Meus projetos:</h2>
-          <div class="projetos">
-            <h3>Projeto 1</h3>
-            <p>Bla bla bla</p>
-          </div>
-        </section>
-        <hr>
-        <section>
-          <h3>Projeto 2</h3>
-          <p>bla bla bla bla</p>
-        </section>
-        <hr>
+        </main>
+
+        <form id="form" class="entrada">
+          <textarea
+            id="campo"
+            rows="1"
+            placeholder="Digite sua mensagem..."
+            aria-label="Mensagem"
+          ></textarea>
+          <button id="btn-enviar" type="submit">Enviar</button>
+        </form>
       </div>
-    </main>
-    <footer>
-      <div class="footer">
-        <p>&copy; 2026 Filipe Rubson. Todos direitos reservados.</p>
-        <p>Contato: filiperubson03@gmail.com</p>
-      </div>
-    </footer>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
